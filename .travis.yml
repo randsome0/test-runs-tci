@@ -10,6 +10,7 @@ script: sleep 10
 
 deploy:
   provider: script
+  edge: true
   on:
     all_branches: true
   script: ruby -v
