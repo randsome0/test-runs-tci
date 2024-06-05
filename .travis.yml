@@ -13,6 +13,7 @@ before_script:
 - npm install grunt-cli -g
 - ruby -v
 - gem -v
+- rvm install 3.2.4 && rvm use 3.2.4
 - gem update --system
 - gem install sass
 script: sleep 10
