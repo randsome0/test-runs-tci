@@ -1,17 +1,18 @@
-os: linux
-dist: xenial
-language: csharp
-mono:
-  - none
-dotnet:
-  - 3.1.401
+language: node_js
+os:
+- linux
+dist: focal
+node_js:
+- '18'
+python:
+- '3.7'
+cache:
+  pip: true
 install: skip
+before_script:
+- npm install grunt-cli -g
+- ruby -v
+- gem -v
+- gem update --system
+- gem install sass
 script: sleep 10
-
-deploy:
-  provider: script
-  edge:
-    branch: v2.0.3-beta.4
-  on:
-    all_branches: true
-  script: ruby -v
